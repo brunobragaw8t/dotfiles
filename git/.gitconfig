@@ -1,5 +1,7 @@
 [user]
 	email = brunobragaw8t@gmail.com
 	name = Bruno Braga
+[credential]
+	helper = store
 [core]
 	editor = nvim

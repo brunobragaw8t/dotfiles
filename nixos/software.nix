@@ -26,6 +26,7 @@
     code-cursor
     alacritty
     xclip
+    lazygit
   ];
 }
 

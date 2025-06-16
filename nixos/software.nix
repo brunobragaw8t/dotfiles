@@ -9,6 +9,9 @@
       enable = true;
       defaultEditor = true;
     };
+    tmux = {
+      enable = true;
+    };
   };
 
   services = {

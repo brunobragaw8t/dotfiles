@@ -28,5 +28,6 @@
     xclip
     lazygit
     bun
+    ngrok
   ];
 }

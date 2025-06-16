@@ -1,0 +1,268 @@
+{
+  /**
+   * Appearance
+   */
+
+  "workbench.colorTheme": "Tokyo Night",
+
+  // Define font and enable ligatures
+  "editor.fontSize": 16,
+  "editor.fontWeight": "500",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+
+  // Make cursor stay in middle of screen
+  "editor.cursorSurroundingLines": 999,
+
+  // Enable smooth cursor animation
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Display rulers for recommended max line length
+  "editor.rulers": [80, 120],
+
+  // Enable sticky headers for functions/loops/statements/etc
+  "editor.stickyScroll.enabled": false,
+
+  // Set relative line numbers
+  "editor.lineNumbers": "relative",
+
+  "window.menuBarVisibility": "toggle",
+  "workbench.editor.tabSizing": "shrink",
+
+  "explorer.decorations.colors": false,
+  "explorer.decorations.badges": false,
+  "explorer.compactFolders": false,
+  "workbench.editor.decorations.badges": false,
+  "editor.semanticHighlighting.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  /**
+   * Workflow
+   */
+
+  // Enable Git 3-way merge conflict editor
+  "git.mergeEditor": true,
+
+  /**
+   * Formatting
+   */
+
+  // Delete empty lines from end of file
+  "files.trimFinalNewlines": true,
+
+  // Insert one empty line at the end of file
+  "files.insertFinalNewline": true,
+
+  // Delete spaces after last character of line
+  "files.trimTrailingWhitespace": true,
+
+  // Define file end-of-line as LF, instead of CRLF
+  "files.eol": "\n",
+
+  /**
+   * Intellisense
+   */
+
+  // Disable keyword suggestion
+  "editor.suggest.showKeywords": false,
+
+  // Disable autocomplete
+  "editor.acceptSuggestionOnCommitCharacter": false,
+
+  // Prevent auto selection of first suggestion
+  "editor.suggest.selectionMode": "never",
+
+  // Disable intellisense in CSS
+  "[css][scss]": {
+    "editor.suggest.showProperties": false,
+    "editor.suggest.showFunctions": false,
+    "editor.suggest.showWords": false,
+    "editor.suggest.showSnippets": false,
+    "editor.suggest.showUnits": false
+  },
+
+  /**
+   * Extensions
+   */
+
+  "emmet.preferences": {
+    // Define Emmet comment style
+    "filter.commentAfter": "<!-- [#ID][.CLASS] -->",
+
+    // Define Emmet shortcuts default unit
+    "css.intUnit": "rem",
+    "css.floatUnit": "rem"
+  },
+  "emmet.triggerExpansionOnTab": true,
+
+  // Automatically format files with Prettier
+  "[scss][json][jsonc][javascript][typescript][typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  // To improve performance
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+
+  // Map Space as Leader
+  "vim.leader": "<Space>",
+
+  // Allow Vim to access system's clipboard
+  "vim.useSystemClipboard": true,
+
+  // Enable search highlighting
+  "vim.hlsearch": true,
+
+  // Highlight on yank
+  "vim.highlightedyank.enable": true,
+
+  // Vim mappings in normal mode
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Open file explorer
+    {
+      "before": ["<Leader>", "e"],
+      "commands": ["workbench.view.explorer"]
+    },
+
+    // Clear search highlights
+    {
+      "before": ["<Esc>"],
+      "commands": [":nohls", "closeMarkersNavigation"]
+    },
+
+    // Close file explorer
+    {
+      "before": ["<Enter>"],
+      "commands": ["workbench.action.closeSidebar"]
+    },
+
+    // Close buffer
+    {
+      "before": ["<C-w>"],
+      "commands": [":bd"]
+    },
+
+    // Show hover
+    {
+      "before": ["K"],
+      "commands": ["editor.action.showHover"]
+    },
+
+    // Find project
+    {
+      "before": ["<Leader>", "f", "p"],
+      "commands": ["workbench.action.openRecent"]
+    },
+
+    // Find files
+    {
+      "before": ["<Leader>", "f", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+
+    // Rename symbol
+    {
+      "before": ["g", "r", "n"],
+      "commands": ["editor.action.rename"]
+    },
+
+    // Don't yank on deleting character
+    {
+      "before": ["x"],
+      "after": ["\"", "_", "x"]
+    },
+
+    // Go to symbol
+    {
+      "before": ["g", "s"],
+      "commands": ["workbench.action.gotoSymbol"]
+    },
+
+    // Move tab left
+    {
+      "before": ["H"],
+      "commands": ["workbench.action.moveEditorLeftInGroup"]
+    },
+
+    // Move tab right
+    {
+      "before": ["L"],
+      "commands": ["workbench.action.moveEditorRightInGroup"]
+    },
+
+    // Go to previous problem
+    {
+      "before": ["<M-\\>"],
+      "commands": ["editor.action.marker.prev"]
+    },
+
+    // Go to next problem
+    {
+      "before": ["\\"],
+      "commands": ["editor.action.marker.next"]
+    },
+
+    // Yank whole buffer
+    {
+      "before": ["<Leader>", "y"],
+      "commands": [":%y"]
+    },
+
+    // Go to right split
+    {
+      "before": ["<C-q>", "l"],
+      "commands": ["workbench.action.focusNextGroup"]
+    },
+
+    // Go to left split
+    {
+      "before": ["<C-q>", "h"],
+      "commands": ["workbench.action.focusPreviousGroup"]
+    },
+
+    // Open code actions (ctrl + .)
+    {
+      "before": ["g", "r", "a"],
+      "commands": ["editor.action.codeAction"]
+    },
+
+    // Yank to end of line
+    {
+      "before": ["Y"],
+      "after": ["y", "$"]
+    }
+  ],
+
+  // Vim mappings in visual mode
+  "vim.visualModeKeyBindingsNonRecursive": [
+    // Paste without yanking
+    {
+      "before": ["p"],
+      "after": ["\"", "_", "d", "P"]
+    },
+
+    // Stay in visual mode after indenting
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+
+    // Stay in visual mode after unindenting
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    }
+  ],
+
+  /**
+   * Misc
+   */
+
+  // Open new windows maximized
+  "window.newWindowDimensions": "maximized",
+
+  // Disable prompt for untrusted files
+  "security.workspace.trust.untrustedFiles": "open"
+}

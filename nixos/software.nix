@@ -29,5 +29,6 @@
     lazygit
     bun
     ngrok
+    fzf
   ];
 }

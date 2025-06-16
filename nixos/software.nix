@@ -27,5 +27,6 @@
     alacritty
     xclip
     lazygit
+    bun
   ];
 }

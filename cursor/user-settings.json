@@ -101,6 +101,9 @@
     "editor.formatOnSave": true
   },
 
+  // Disable Biome suggestion to install globally
+  "biome.suggestInstallingGlobally": false,
+
   // To improve performance
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1

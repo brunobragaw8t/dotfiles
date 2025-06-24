@@ -101,11 +101,6 @@
     "editor.formatOnSave": true
   },
 
-  // Organize imports with Biome
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.biome": "explicit"
-  },
-
   // To improve performance
   "extensions.experimental.affinity": {
     "vscodevim.vim": 1

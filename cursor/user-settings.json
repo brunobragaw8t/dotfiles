@@ -144,6 +144,12 @@
       "commands": [":bd"]
     },
 
+    // Code other buffers
+    {
+      "before": ["<Leader>", "c", "o"],
+      "commands": ["workbench.action.closeOtherEditors"]
+    },
+
     // Show hover
     {
       "before": ["K"],

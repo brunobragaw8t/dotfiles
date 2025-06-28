@@ -241,6 +241,12 @@
     {
       "before": ["Y"],
       "after": ["y", "$"]
+    },
+
+    // Use correct "undo" command
+    {
+      "before": ["u"],
+      "commands": ["undo"]
     }
   ],
 

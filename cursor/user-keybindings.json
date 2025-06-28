@@ -56,12 +56,12 @@
   {
     "key": "shift+h",
     "command": "workbench.action.moveEditorLeftInGroup",
-    "when": "!editorFocus && !filesExplorerFocus && !terminalFocus && !composerFocused"
+    "when": "!editorFocus && !filesExplorerFocus && !terminalFocus && !composerFocused && !searchInputBoxFocus"
   },
   {
     "key": "shift+l",
     "command": "workbench.action.moveEditorRightInGroup",
-    "when": "!editorFocus && !filesExplorerFocus && !terminalFocus && !composerFocused"
+    "when": "!editorFocus && !filesExplorerFocus && !terminalFocus && !composerFocused && !searchInputBoxFocus"
   },
   // Editor
   {

@@ -35,8 +35,8 @@ tmux split-window -h
 tmux split-window -h
 tmux select-layout even-horizontal
 
-tmux send-keys -t 0 "cd '$selected_path'" C-m
-tmux send-keys -t 1 "cd '$selected_path'" C-m
-tmux send-keys -t 2 "cd '$selected_path'" C-m
+tmux send-keys -t 0 "cd '$selected_path' && clear" C-m
+tmux send-keys -t 1 "cd '$selected_path' && clear" C-m
+tmux send-keys -t 2 "cd '$selected_path' && clear" C-m
 
 tmux rename-window "$selected_dir"

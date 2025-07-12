@@ -31,5 +31,6 @@
     nodejs_20
     ngrok
     fzf
+    zed-editor
   ];
 }

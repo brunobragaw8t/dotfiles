@@ -18,3 +18,9 @@ ln -s "$DOTFILES_DIR/cursor/user-settings.json" ~/.config/Cursor/User/settings.j
 
 [ -f ~/.config/Cursor/User/keybindings.json ] && mv ~/.config/Cursor/User/keybindings.json ~/.config/Cursor/User/keybindings.json.backup
 ln -s "$DOTFILES_DIR/cursor/user-keybindings.json" ~/.config/Cursor/User/keybindings.json
+
+[ -f ~/.config/zed/settings.json ] && mv ~/.config/zed/settings.json ~/.config/zed/settings.json.backup
+ln -s "$DOTFILES_DIR/zed/user-settings.json" ~/.config/zed/settings.json
+
+[ -f ~/.config/zed/keymap.json ] && mv ~/.config/zed/keymap.json ~/.config/zed/keymap.json.backup
+ln -s "$DOTFILES_DIR/zed/user-keymap.json" ~/.config/zed/keymap.json

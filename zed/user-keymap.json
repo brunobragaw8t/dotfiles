@@ -1,0 +1,177 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  // Picker
+  {
+    "context": "EmptyPane || SharedScreen", // On empty editor
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space f p": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
+    "bindings": {
+      "ctrl-y": "menu::Confirm"
+    }
+  },
+  // Move lines
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp"
+    }
+  },
+  // Tabs
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-w": "pane::CloseActiveItem"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      "shift-h": "pane::SwapItemLeft",
+      "shift-l": "pane::SwapItemRight",
+      "space c o": "pane::CloseInactiveItems"
+    }
+  },
+  // File tree
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space e": "project_panel::ToggleFocus",
+      "enter": "workspace::CloseAllDocks"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "shift-w": "project_panel::CollapseAllEntries",
+      "o": ["workspace::SendKeystrokes", "enter ctrl-alt-y"], // Auto close file tree on open file
+      "a": "project_panel::NewFile",
+      "e": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "c": "project_panel::Copy",
+      "y": "workspace::CopyRelativePath",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "q": "workspace::ToggleLeftDock"
+    }
+  },
+  // LSP
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "ctrl-k": "editor::ShowSignatureHelp",
+      "\\": "editor::GoToDiagnostic",
+      "alt-\\": "editor::GoToPreviousDiagnostic"
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-k": "editor::ShowSignatureHelp"
+    }
+  },
+  {
+    "context": "Editor && showing_code_actions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCodeAction"
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "alt-o": ["workspace::SendKeystrokes", "v [ x z z"],
+      "alt-i": ["workspace::SendKeystrokes", "v ] x z z"]
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "alt-o": ["workspace::SendKeystrokes", "[ x z z"],
+      "alt-i": ["workspace::SendKeystrokes", "] x z z"]
+    }
+  },
+  // Completions
+  {
+    "context": "vim_mode == insert && !showing_code_actions && !showing_completions",
+    "bindings": {
+      "ctrl-n": "editor::ShowCompletions"
+    }
+  },
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion",
+      "enter": "editor::Newline"
+    }
+  },
+  // Predictions
+  {
+    "context": "Editor && edit_prediction",
+    "bindings": {
+      "tab": null,
+      "alt-a": "editor::AcceptEditPrediction"
+    }
+  },
+  {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      "alt-a": "editor::AcceptEditPrediction"
+    }
+  },
+  // AI
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      "ctrl-alt-a": "agent::ToggleFocus"
+    }
+  },
+  {
+    "context": "AgentPanel",
+    "bindings": {
+      "ctrl-alt-a": "workspace::ToggleRightDock"
+    }
+  },
+  // Misc
+  {
+    "context": "VimControl && !menu", // normal and visual modes
+    "bindings": {
+      "x": ["workspace::SendKeystrokes", "\" _ x"] // Don't yank on deleting character
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "space y": ["workspace::SendKeystrokes", ": % y enter"] // Yank whole buffer
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "p": ["workspace::SendKeystrokes", "P"], // Don't yank on pasting
+      "<": ["workspace::SendKeystrokes", "< g v"], // Stay in visual mode after indenting
+      ">": ["workspace::SendKeystrokes", "> g v"], // Stay in visual mode after indenting
+      "shift-s": ["vim::PushAddSurrounds", {}] // Add surrounding
+    }
+  }
+]

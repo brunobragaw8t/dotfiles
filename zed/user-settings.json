@@ -1,0 +1,58 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  // Vim
+  "vim_mode": true,
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 999,
+  "horizontal_scroll_margin": 16,
+  // "wrap_guides": [80, 120],
+
+  // Appearance
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Tokyo Night"
+  },
+  // "ui_font_size": 19,
+  "buffer_font_size": 19,
+  "title_bar": {
+    "show_user_picture": false
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": false
+  },
+  "toolbar": {
+    "quick_actions": false
+  },
+  "project_panel": {
+    "auto_fold_dirs": false,
+    "show_diagnostics": "off"
+  },
+  "search": {
+    "button": false
+  },
+
+  // LSP
+  "auto_signature_help": true,
+
+  // Git
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+
+  // Misc
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}

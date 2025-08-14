@@ -1,4 +1,4 @@
 env.TERM = "xterm-256color"
 window.decorations = "None"
-font.size = 19
+font.size = 16
 general.import = [ "/home/braga/dotfiles/alacritty/tokyo-night.toml" ]

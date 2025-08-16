@@ -50,12 +50,12 @@
       "ctrl-l": "pane::ActivateNextItem",
       "shift-h": "pane::SwapItemLeft",
       "shift-l": "pane::SwapItemRight",
-      "space c o": "pane::CloseInactiveItems"
+      "space c o": "pane::CloseOtherItems"
     }
   },
   // File tree
   {
-    "context": "vim_mode == normal && !menu",
+    "context": "vim_mode == normal && !menu && !AgentPanel",
     "bindings": {
       "space e": "project_panel::ToggleFocus",
       "enter": "workspace::CloseAllDocks"
@@ -141,7 +141,7 @@
   },
   // AI
   {
-    "context": "vim_mode == normal",
+    "context": "vim_mode == normal && !AgentPanel",
     "bindings": {
       "ctrl-alt-a": "agent::ToggleFocus"
     }
@@ -170,8 +170,7 @@
     "bindings": {
       "p": ["workspace::SendKeystrokes", "P"], // Don't yank on pasting
       "<": ["workspace::SendKeystrokes", "< g v"], // Stay in visual mode after indenting
-      ">": ["workspace::SendKeystrokes", "> g v"], // Stay in visual mode after indenting
-      "shift-s": ["vim::PushAddSurrounds", {}] // Add surrounding
+      ">": ["workspace::SendKeystrokes", "> g v"] // Stay in visual mode after indenting
     }
   }
 ]

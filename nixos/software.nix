@@ -49,5 +49,6 @@ in
     fzf
     zed-editor
     dotnet-sdk
+    vlc
   ];
 }

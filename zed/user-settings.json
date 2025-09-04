@@ -22,6 +22,7 @@
   },
   // "ui_font_size": 19,
   "buffer_font_size": 19,
+  "soft_wrap": "editor_width",
   "title_bar": {
     "show_user_picture": false
   },

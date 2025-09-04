@@ -42,7 +42,7 @@
   },
 
   // LSP
-  "auto_signature_help": true,
+  "auto_signature_help": false,
 
   // Git
   "git": {

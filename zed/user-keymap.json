@@ -81,8 +81,8 @@
     "context": "vim_mode == normal && !menu",
     "bindings": {
       "ctrl-k": "editor::ShowSignatureHelp",
-      "\\": "editor::GoToDiagnostic",
-      "alt-\\": "editor::GoToPreviousDiagnostic"
+      "`": "editor::GoToDiagnostic",
+      "~": "editor::GoToPreviousDiagnostic"
     }
   },
   {

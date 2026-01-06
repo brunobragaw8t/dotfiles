@@ -82,7 +82,8 @@
     "bindings": {
       "ctrl-k": "editor::ShowSignatureHelp",
       "`": "editor::GoToDiagnostic",
-      "~": "editor::GoToPreviousDiagnostic"
+      "~": "editor::GoToPreviousDiagnostic",
+      "space o i": "editor::OrganizeImports"
     }
   },
   {

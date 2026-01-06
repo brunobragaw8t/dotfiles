@@ -14,11 +14,6 @@ if [ -f ~/.config/alacritty/alacritty.toml ]; then
 fi
 ln -s "$DOTFILES_DIR/alacritty/alacritty.toml" ~/.config/alacritty/alacritty.toml
 
-if [ -f /etc/bashrc.local ]; then
-  mv /etc/bashrc.local /etc/bashrc.local.backup_$TIMESTAMP
-fi
-sudo ln -s "$DOTFILES_DIR/bash/.bashrc" /etc/bashrc.local
-
 if [ -f ~/.tmux.conf ]; then
   mv ~/.tmux.conf ~/.tmux.conf.backup_$TIMESTAMP
 fi

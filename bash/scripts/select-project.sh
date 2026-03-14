@@ -34,11 +34,13 @@ selected_path="$HOME/projects/$selected_dir"
 tmux split-window -h
 tmux split-window -h
 tmux split-window -h
+tmux split-window -h
 tmux select-layout even-horizontal
 
 tmux send-keys -t 0 "cd '$selected_path' && lazygit" C-m
 tmux send-keys -t 1 "cd '$selected_path' && opencode" C-m
 tmux send-keys -t 2 "cd '$selected_path' && vim" C-m
 tmux send-keys -t 3 "cd '$selected_path' && clear" C-m # Left empty to run dev server
+tmux send-keys -t 4 "cd '$selected_path' && clear" C-m # Left empty to run other scripts
 
 tmux rename-window "$selected_dir"

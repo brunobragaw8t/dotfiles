@@ -15,4 +15,4 @@ alias oc='opencode'
 
 # Scripts
 
-alias dev='bash ~/dotfiles/bash/scripts/select-project.sh'
+alias pp='bash ~/dotfiles/bash/scripts/pick-project.sh'

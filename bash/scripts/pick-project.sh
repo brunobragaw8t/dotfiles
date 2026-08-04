@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [ ! -d "$HOME/projects" ]; then
-    echo "Error: ~/projects directory does not exist"
+if [ ! -d "$HOME/repos" ]; then
+    echo "Error: ~/repos directory does not exist"
     exit 1
 fi
 
@@ -15,7 +15,7 @@ if ! command -v fzf &> /dev/null; then
     exit 1
 fi
 
-cd "$HOME/projects" || exit 1
+cd "$HOME/repos" || exit 1
 
 selected_dir=$(find . -maxdepth 1 -type d -not -path . | sed 's|./||' | sort | fzf --prompt="🔎 " --height=40% --border)
 
@@ -25,11 +25,11 @@ if [ -z "$selected_dir" ]; then
 fi
 
 if [ ! -d "$selected_dir" ]; then
-    echo "No directories found in ~/projects"
+    echo "No directories found in ~/repos"
     exit 1
 fi
 
-selected_path="$HOME/projects/$selected_dir"
+selected_path="$HOME/repos/$selected_dir"
 
 tmux split-window -h
 tmux split-window -h

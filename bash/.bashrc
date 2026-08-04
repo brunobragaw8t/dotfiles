@@ -16,3 +16,9 @@ alias oc='opencode'
 # Scripts
 
 alias pp='bash ~/dotfiles/bash/scripts/pick-project.sh'
+
+# Tmux
+
+if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
+    tmux attach || tmux new
+fi

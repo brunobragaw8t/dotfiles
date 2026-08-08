@@ -1,9 +1,17 @@
+# General
+
+## Aliases
+alias open='xdg-open'
+
+## Scripts
+alias pp='bash ~/dotfiles/bash/scripts/pick-project.sh'
+
 # Neovim
 
 ## Aliases
 alias vim='nvim'
 
-# Lazygit
+# lazygit
 
 ## Aliases
 alias lg='lazygit'
@@ -13,11 +21,7 @@ alias lg='lazygit'
 ## Aliases
 alias oc='opencode'
 
-# Scripts
-
-alias pp='bash ~/dotfiles/bash/scripts/pick-project.sh'
-
-# Tmux
+# tmux
 
 if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
     tmux attach || tmux new

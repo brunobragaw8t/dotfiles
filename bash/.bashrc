@@ -31,3 +31,7 @@ fi
 
 ## Aliases
 alias ls='eza --long --git-repos --no-permissions --no-user --icons=always --all --group-directories-first'
+
+# Starship
+
+eval "$(starship init bash)"

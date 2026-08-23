@@ -20,6 +20,7 @@ $SUDO pacman -Syu --noconfirm --needed \
   ripgrep \
   fd \
   eza \
+  starship \
   alacritty \
   wl-clipboard \
   tmux \

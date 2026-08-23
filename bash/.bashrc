@@ -24,5 +24,5 @@ alias oc='opencode'
 # tmux
 
 if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
-    tmux attach || tmux new
+    tmux attach || tmux new -c ~/repos
 fi

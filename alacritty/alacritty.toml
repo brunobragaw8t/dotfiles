@@ -1,4 +1,4 @@
 window.decorations = "None"
 font.size = 16
 font.normal = { family = "FiraCodeNerdFont" }
-general.import = ["/home/braga/dotfiles/alacritty/tokyo-night.toml"]
+general.import = ["~/dotfiles/alacritty/tokyo-night.toml"]

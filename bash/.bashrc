@@ -26,3 +26,8 @@ alias oc='opencode'
 if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
     tmux attach || tmux new -c ~/repos
 fi
+
+# eza
+
+## Aliases
+alias ls='eza --long --git-repos --no-permissions --no-user --icons=always --all --group-directories-first'

@@ -19,6 +19,7 @@ $SUDO pacman -Syu --noconfirm --needed \
   fzf \
   ripgrep \
   fd \
+  eza \
   alacritty \
   wl-clipboard \
   tmux \
